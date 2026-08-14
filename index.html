@@ -1,20 +1,141 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f97068" />
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylewhizme | Luxury Styling & Image Curation</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Pacifico&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-    <title>Pinaco | Global Fine Art Marketplace (Global Shipping)</title>
-    <meta name="description" content="Pinaco is the premier marketplace for physical fine art. We connect collectors with visionary artists and ship unique masterpieces worldwide using secure crypto payments." />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', 'serif'],
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                black: '#0A0A0C',
+                card: '#121216',
+                cream: '#F4F0EA',
+                gold: '#C5A059',
+                muted: '#8A8A93'
+              }
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-brand-black text-brand-cream font-sans antialiased selection:bg-brand-gold selection:text-black">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-brand-black/70 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif text-2xl tracking-widest text-brand-cream uppercase font-semibold">
+                Stylewhizme<span class="text-brand-gold">.</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-xs tracking-[0.2em] uppercase font-medium text-brand-muted">
+                <a href="#about" class="hover:text-brand-gold transition-colors">About</a>
+                <a href="#philosophy" class="hover:text-brand-gold transition-colors">Philosophy</a>
+                <a href="#services" class="hover:text-brand-gold transition-colors">Services</a>
+            </div>
+            <a href="#contact" class="text-xs uppercase tracking-widest border border-brand-gold/40 px-5 py-2.5 rounded-full text-brand-gold hover:bg-brand-gold hover:text-black transition-all duration-300">
+                Book Consultation
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden">
+        <!-- Ambient background glow -->
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-brand-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-6 text-center z-10 py-20">
+            <p class="text-brand-gold uppercase text-xs tracking-[0.3em] mb-6 font-medium">Modern Luxury & Personal Styling</p>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-tight mb-8">
+                Timeless style meets <br><span class="italic font-normal text-brand-gold">modern luxury.</span>
+            </h1>
+            <p class="text-brand-muted max-w-2xl mx-auto text-base md:text-lg font-light leading-relaxed mb-10">
+                A luxury styling brand dedicated to helping individuals discover the power of looking effortlessly exceptional.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#services" class="w-full sm:w-auto bg-brand-cream text-brand-black px-8 py-4 rounded-full font-medium text-xs uppercase tracking-widest hover:bg-brand-gold transition-colors duration-300">
+                    Explore Styling
+                </a>
+                <a href="#about" class="w-full sm:w-auto border border-white/10 px-8 py-4 rounded-full font-medium text-xs uppercase tracking-widest hover:border-white/30 transition-colors duration-300">
+                    Our Story
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY / BENTO GRID SECTION -->
+    <section id="about" class="py-24 border-t border-white/5 bg-brand-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 max-w-xl">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-brand-gold mb-3">Our Core Philosophy</h2>
+                <p class="font-serif text-3xl md:text-4xl text-brand-cream">Effortless elegance, curated with intention.</p>
+            </div>
+
+            <!-- Bento Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-gold/20 transition-all duration-300 md:col-span-2">
+                    <span class="text-brand-gold font-serif text-2xl italic">01</span>
+                    <h3 class="font-serif text-2xl text-brand-cream mt-4 mb-3">Beyond Following Trends</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">
+                        True luxury is not about following every fleeting fashion cycle—it is about presence, confidence, individuality, and timeless elegance. We focus on classic silhouettes and elevated details that outlast seasonal hype.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-gold/20 transition-all duration-300">
+                    <span class="text-brand-gold font-serif text-2xl italic">02</span>
+                    <h3 class="font-serif text-2xl text-brand-cream mt-4 mb-3">Quiet Luxury</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">
+                        Blending sophisticated styling with the quiet confidence of old-money aesthetics to craft looks that feel distinctive yet naturally you.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-gold/20 transition-all duration-300">
+                    <span class="text-brand-gold font-serif text-2xl italic">03</span>
+                    <h3 class="font-serif text-2xl text-brand-cream mt-4 mb-3">Every Detail Matters</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">
+                        From curated everyday wear to red-carpet statements: every piece has a purpose, and every outfit tells a story.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-gold/20 transition-all duration-300 md:col-span-2">
+                    <span class="text-brand-gold font-serif text-2xl italic">04</span>
+                    <h3 class="font-serif text-2xl text-brand-cream mt-4 mb-3">Personal & Unforgettable</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">
+                        Our vision is to redefine luxury styling for the modern individual—making sophistication feel deeply personal, attainable, and memorable.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CTA -->
+    <footer id="contact" class="py-24 border-t border-white/5 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-serif text-4xl md:text-6xl mb-6">Stylewhizme<span class="text-brand-gold">.</span></h2>
+            <p class="font-serif text-2xl italic text-brand-gold mb-10">"Wear your confidence."</p>
+            <p class="text-brand-muted text-xs uppercase tracking-widest">
+                © 2026 Stylewhizme. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
 </html>
