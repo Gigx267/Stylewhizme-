@@ -52,8 +52,11 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden">
+    <!-- HERO SECTION WITH BACKGROUND IMAGE -->
+    <section class="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop');">
+        <!-- Dark Gradient Overlay for optimal text contrast -->
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-black/80 via-brand-black/60 to-brand-black"></div>
+
         <!-- Ambient background glow -->
         <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
         <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-brand-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
@@ -70,15 +73,58 @@
                 <a href="#services" class="w-full sm:w-auto bg-brand-cream text-brand-black px-8 py-4 rounded-full font-medium text-xs uppercase tracking-widest hover:bg-brand-gold transition-colors duration-300">
                     Explore Styling
                 </a>
-                <a href="#about" class="w-full sm:w-auto border border-white/10 px-8 py-4 rounded-full font-medium text-xs uppercase tracking-widest hover:border-white/30 transition-colors duration-300">
+                <a href="#about" class="w-full sm:w-auto border border-white/20 bg-brand-black/40 backdrop-blur-sm px-8 py-4 rounded-full font-medium text-xs uppercase tracking-widest hover:border-brand-gold hover:text-brand-gold transition-colors duration-300">
                     Our Story
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="py-24 border-t border-white/5 bg-brand-black relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Imagery Column -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative z-10 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" alt="Luxury Fashion Styling Portrait" class="w-full h-[550px] object-cover object-center filter grayscale hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Decorative Gold Accent Border -->
+                    <div class="absolute -bottom-6 -right-6 w-full h-full border border-brand-gold/30 rounded-2xl -z-0 hidden sm:block"></div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="lg:col-span-7 lg:pl-8">
+                    <p class="text-xs uppercase tracking-[0.3em] text-brand-gold mb-3 font-medium">About Stylewhizme</p>
+                    <h2 class="font-serif text-4xl md:text-5xl text-brand-cream font-light mb-6 leading-tight">
+                        Crafting personal narratives through <span class="italic text-brand-gold">high-art fashion.</span>
+                    </h2>
+                    <p class="text-brand-muted text-base leading-relaxed mb-6 font-light">
+                        Founded on the belief that personal style is an authentic expression of inner confidence, Stylewhizme bridges the gap between haute couture artistry and practical personal wardrobe curation.
+                    </p>
+                    <p class="text-brand-muted text-base leading-relaxed mb-8 font-light">
+                        Whether curating high-profile red-carpet ensembles, building modular capsule wardrobes for executives, or redefining an aesthetic identity, we provide discreet, world-class styling services bespoke to your lifestyle.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/10">
+                        <div>
+                            <span class="font-serif text-3xl md:text-4xl text-brand-gold italic block mb-1">10+</span>
+                            <span class="text-xs uppercase tracking-widest text-brand-muted">Years of Curation</span>
+                        </div>
+                        <div>
+                            <span class="font-serif text-3xl md:text-4xl text-brand-gold italic block mb-1">Bespoke</span>
+                            <span class="text-xs uppercase tracking-widest text-brand-muted">Tailored Experience</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- PHILOSOPHY / BENTO GRID SECTION -->
-    <section id="about" class="py-24 border-t border-white/5 bg-brand-black">
+    <section id="philosophy" class="py-24 border-t border-white/5 bg-brand-black">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-16 max-w-xl">
                 <h2 class="text-xs uppercase tracking-[0.3em] text-brand-gold mb-3">Our Core Philosophy</h2>
