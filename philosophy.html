@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Philosophy – Stylewhizme | Luxury Styling & Image Curation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', 'serif'],
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                black: '#08080A',
+                card: '#111115',
+                cream: '#F4F0EA',
+                gold: '#D4AF37',
+                goldLight: '#F3E5AB',
+                muted: '#9A9A9E'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .philosophy-card {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .philosophy-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 60px -12px rgba(212, 175, 55, 0.06);
+        }
+        .dropcap::first-letter {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            float: left;
+            line-height: 0.8;
+            padding-right: 0.75rem;
+            padding-top: 0.15rem;
+            color: #D4AF37;
+            font-weight: 300;
+        }
+        .border-gold-subtle {
+            border-color: rgba(212, 175, 55, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-brand-black text-brand-cream font-sans antialiased selection:bg-brand-gold selection:text-black overflow-x-hidden">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-brand-black/80 border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-serif text-2xl tracking-[0.2em] text-brand-cream uppercase font-semibold group">
+                Stylewhizme<span class="text-brand-gold inline-block transition-transform duration-300 group-hover:scale-125">.</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-10 text-xs tracking-[0.25em] uppercase font-medium text-brand-muted">
+                <a href="about.html" class="hover:text-brand-gold transition-colors duration-300">About</a>
+                <a href="philosophy.html" class="text-brand-gold border-b border-brand-gold/40 pb-0.5">Philosophy</a>
+                <a href="services.html" class="hover:text-brand-gold transition-colors duration-300">Services</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="Book.html" class="relative group overflow-hidden text-xs uppercase tracking-[0.2em] px-6 py-3 rounded-full text-brand-gold border border-brand-gold/40 inline-block transition-all duration-300 hover:text-black">
+                    <span class="absolute inset-0 bg-gradient-to-r from-brand-goldLight to-brand-gold translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+                    <span class="relative z-10 font-medium">Book Consultation</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="md:hidden text-brand-cream focus:outline-none z-50 p-2">
+                <div class="w-6 h-5 flex flex-col justify-between">
+                    <span id="line-1" class="w-full h-0.5 bg-brand-cream transition-all duration-300 origin-left"></span>
+                    <span id="line-2" class="w-3/4 h-0.5 bg-brand-gold transition-all duration-300 self-end"></span>
+                    <span id="line-3" class="w-full h-0.5 bg-brand-cream transition-all duration-300 origin-left"></span>
+                </div>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="fixed inset-0 top-20 bg-brand-black/95 backdrop-blur-2xl transition-all duration-500 ease-in-out opacity-0 pointer-events-none flex flex-col justify-between p-8 border-t border-white/10 md:hidden h-[calc(100vh-5rem)]">
+            <div class="flex flex-col space-y-8 pt-6">
+                <a href="about.html" class="mobile-nav-link font-serif text-3xl text-brand-cream hover:text-brand-gold transition-colors">01. About</a>
+                <a href="philosophy.html" class="mobile-nav-link font-serif text-3xl text-brand-gold transition-colors">02. Philosophy</a>
+                <a href="services.html" class="mobile-nav-link font-serif text-3xl text-brand-cream hover:text-brand-gold transition-colors">03. Services</a>
+            </div>
+            <div class="space-y-6 pt-8 border-t border-white/10">
+                <a href="Book.html" class="mobile-nav-link block text-center w-full bg-gradient-to-r from-brand-gold to-brand-goldLight text-black font-semibold uppercase tracking-[0.2em] text-xs py-4 rounded-full shadow-lg shadow-brand-gold/10">
+                    Book Consultation
+                </a>
+                <p class="text-center font-serif text-sm italic text-brand-muted">"Wear your confidence."</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== PHILOSOPHY HERO ===== -->
+    <section class="pt-40 pb-20 md:pt-48 md:pb-28 relative overflow-hidden bg-brand-black border-b border-white/5">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-gold/10 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute top-1/2 -right-40 w-80 h-80 bg-brand-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Left: Text -->
+                <div>
+                    <span class="inline-block border border-brand-gold/30 bg-brand-gold/10 backdrop-blur-md px-4 py-1.5 rounded-full text-brand-goldLight uppercase text-[10px] md:text-xs tracking-[0.3em] mb-6 font-medium">
+                        Our Philosophy
+                    </span>
+                    <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-light leading-[1.05] tracking-tight mb-6">
+                        The art of <br /><span class="italic gold-gradient-text font-normal">authentic presence.</span>
+                    </h1>
+                    <p class="text-brand-muted text-base md:text-lg leading-relaxed font-light max-w-xl">
+                        We believe that true style is not about what you wear — it's about who you are. Our philosophy is rooted in the pursuit of authenticity, confidence, and timeless elegance.
+                    </p>
+                </div>
+                <!-- Right: Decorative Quote -->
+                <div class="relative">
+                    <div class="bg-brand-card p-10 md:p-14 rounded-2xl border border-gold-subtle relative overflow-hidden">
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-gold/5 rounded-full blur-2xl"></div>
+                        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-brand-gold/5 rounded-full blur-2xl"></div>
+                        <div class="relative z-10">
+                            <span class="text-6xl font-serif text-brand-gold opacity-30 leading-none">"</span>
+                            <p class="font-serif text-2xl md:text-3xl text-brand-cream font-light italic leading-[1.3] -mt-4">
+                                Style is the visible expression of your inner truth.
+                            </p>
+                            <p class="text-brand-muted text-sm uppercase tracking-[0.2em] mt-6 font-medium">
+                                — Stylewhizme Manifesto
+                            </p>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 w-full h-full border border-brand-gold/10 rounded-2xl z-0 hidden sm:block"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CORE BELIEFS ===== -->
+    <section class="py-20 md:py-28 bg-brand-black relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-xs uppercase tracking-[0.3em] text-brand-gold mb-3 font-semibold">What We Stand For</p>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-cream leading-tight font-light">
+                    Guiding <span class="gold-gradient-text italic">principles.</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Principle 1 -->
+                <div class="philosophy-card bg-brand-card p-10 rounded-2xl border border-white/5">
+                    <span class="text-5xl font-serif text-brand-gold italic block mb-4">01</span>
+                    <h3 class="font-serif text-2xl text-brand-cream mb-4">Authenticity Over Trends</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">
+                        We don't chase ephemeral fashion cycles. Instead, we cultivate timeless personal style that reflects your authentic self — not what the industry dictates.
+                    </p>
+                </div>
+
+                <!-- Principle 2 -->
+                <div class="philosophy-card bg-brand-card p-10 rounded-2xl border border-white/5">
+                    <span class="text-5xl font-serif text-brand-gold italic block mb-4">02</span>
+                    <h3 class="font-serif text-2xl text-brand-cream mb-4">Quiet Luxury</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">
+                        True sophistication speaks softly. We champion understated elegance — exceptional quality, impeccable tailoring, and details that whisper rather than shout.
+                    </p>
+                </div>
+
+                <!-- Principle 3 -->
+                <div class="philosophy-card bg-brand-card p-10 rounded-2xl border border-white/5">
+                    <span class="text-5xl font-serif text-brand-gold italic block mb-4">03</span>
+                    <h3 class="font-serif text-2xl text-brand-cream mb-4">Intentional Curation</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">
+                        Every piece in your wardrobe should serve a purpose. We curate with intention, ensuring each garment, accessory, and detail contributes to your overall narrative.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== THE MANIFESTO (full text) ===== -->
+    <section class="py-20 md:py-28 border-t border-white/5 bg-brand-black relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <p class="text-xs uppercase tracking-[0.3em] text-brand-gold mb-3 font-semibold">The Manifesto</p>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-cream leading-tight font-light">
+                    Our <span class="gold-gradient-text italic">credo.</span>
+                </h2>
+            </div>
+
+            <div class="bg-brand-card p-10 md:p-16 rounded-2xl border border-gold-subtle relative overflow-hidden">
+                <div class="absolute -top-20 -right-20 w-60 h-60 bg-brand-gold/5 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-brand-gold/5 rounded-full blur-3xl"></div>
+                
+                <div class="relative z-10 space-y-6 text-brand-muted text-base md:text-lg font-light leading-relaxed">
+                    <p class="dropcap text-brand-cream">
+                        <span class="font-serif text-6xl float-left mr-4 leading-none text-brand-gold">W</span>e believe that personal style is the most intimate form of self-expression — a silent language that speaks before you utter a single word.
+                    </p>
+                    <p>
+                        In a world of fast fashion and fleeting trends, we choose <span class="text-brand-cream">deliberation over distraction</span>. We choose garments that carry meaning, craftsmanship that endures, and silhouettes that honor the individual.
+                    </p>
+                    <p>
+                        <span class="text-brand-cream">Quiet luxury is not about price tags</span> — it's about the confidence that comes from knowing you are impeccably dressed without seeking validation. It's the subtle sheen of a well-woven fabric, the perfect drape of a tailored jacket, the effortless grace of someone who knows they belong.
+                    </p>
+                    <p>
+                        We reject the notion that style is exclusive to a few. <span class="text-brand-cream">True elegance is democratic</span> — it belongs to anyone willing to invest in understanding their own aesthetic DNA.
+                    </p>
+                    <div class="pt-8 border-t border-white/5">
+                        <p class="text-brand-cream font-serif text-2xl italic text-center">
+                            "Wear your confidence."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== THE APPROACH (expanded) ===== -->
+    <section class="py-20 md:py-28 border-t border-white/5 bg-brand-black relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <p class="text-xs uppercase tracking-[0.3em] text-brand-gold mb-3 font-semibold">The Methodology</p>
+                    <h2 class="font-serif text-4xl md:text-5xl text-brand-cream leading-tight font-light">
+                        Beyond <span class="gold-gradient-text italic">styling.</span>
+                    </h2>
+                    <p class="text-brand-muted text-base leading-relaxed font-light mt-6">
+                        Our approach is holistic. We don't just dress you — we help you discover the most refined version of yourself.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-6 p-6 rounded-xl bg-brand-card/50 border border-white/5 hover:border-brand-gold/20 transition-all duration-300">
+                            <span class="text-3xl font-serif text-brand-gold italic min-w-[48px]">01</span>
+                            <div>
+                                <h4 class="font-serif text-xl text-brand-cream mb-1">Psychological Alignment</h4>
+                                <p class="text-brand-muted text-sm font-light">We understand that how you dress is deeply connected to how you feel. Our process begins with understanding your mindset, aspirations, and self-perception.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6 p-6 rounded-xl bg-brand-card/50 border border-white/5 hover:border-brand-gold/20 transition-all duration-300">
+                            <span class="text-3xl font-serif text-brand-gold italic min-w-[48px]">02</span>
+                            <div>
+                                <h4 class="font-serif text-xl text-brand-cream mb-1">Body Intelligence</h4>
+                                <p class="text-brand-muted text-sm font-light">We celebrate all bodies. Our styling philosophy embraces your unique proportions, coloring, and movement — ensuring every garment enhances your natural beauty.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6 p-6 rounded-xl bg-brand-card/50 border border-white/5 hover:border-brand-gold/20 transition-all duration-300">
+                            <span class="text-3xl font-serif text-brand-gold italic min-w-[48px]">03</span>
+                            <div>
+                                <h4 class="font-serif text-xl text-brand-cream mb-1">Lifestyle Integration</h4>
+                                <p class="text-brand-muted text-sm font-light">Your wardrobe should work for your life — not the other way around. We design collections that seamlessly transition from boardroom to dinner, from travel to leisure.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6 p-6 rounded-xl bg-brand-card/50 border border-white/5 hover:border-brand-gold/20 transition-all duration-300">
+                            <span class="text-3xl font-serif text-brand-gold italic min-w-[48px]">04</span>
+                            <div>
+                                <h4 class="font-serif text-xl text-brand-cream mb-1">Sustainable Sophistication</h4>
+                                <p class="text-brand-muted text-sm font-light">We believe in quality over quantity. Our ethos champions investment pieces, mindful consumption, and a wardrobe that evolves with you — not one that you discard each season.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VISUAL QUOTE ===== -->
+    <section class="py-20 border-t border-white/5 bg-brand-black relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-brand-gold/5 pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <blockquote class="font-serif text-3xl md:text-5xl text-brand-cream font-light italic leading-[1.2]">
+                "Elegance is not a garment — <br /><span class="gold-gradient-text">it is a state of being.</span>"
+            </blockquote>
+            <p class="mt-6 text-brand-muted text-xs uppercase tracking-[0.25em] font-medium">
+                — The Stylewhizme Philosophy
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="py-20 border-t border-white/5 bg-brand-black relative">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="bg-brand-card p-12 md:p-16 rounded-3xl border border-white/10 relative overflow-hidden">
+                <div class="absolute -top-20 -right-20 w-60 h-60 bg-brand-gold/5 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-brand-gold/5 rounded-full blur-3xl"></div>
+                <div class="relative z-10">
+                    <span class="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold">Begin Your Journey</span>
+                    <h3 class="font-serif text-3xl md:text-4xl text-brand-cream mt-4 mb-6 font-light">
+                        Discover your authentic style.
+                    </h3>
+                    <p class="text-brand-muted text-sm md:text-base font-light max-w-xl mx-auto mb-8">
+                        Let us guide you toward a wardrobe that reflects your truest self — with confidence, elegance, and intention.
+                    </p>
+                    <a href="Book.html" class="inline-block bg-gradient-to-r from-brand-gold to-brand-goldLight text-black px-10 py-5 rounded-full font-semibold text-xs uppercase tracking-[0.2em] hover:shadow-xl hover:shadow-brand-gold/20 transition-all duration-300">
+                        Book Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="py-20 border-t border-white/5 text-center relative overflow-hidden bg-brand-black">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-brand-gold/5 pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="font-serif text-5xl md:text-7xl mb-4 tracking-wider">Stylewhizme<span class="text-brand-gold">.</span></h2>
+            <p class="font-serif text-2xl md:text-3xl italic gold-gradient-text mb-12">"Wear your confidence."</p>
+            
+            <a href="mailto:contact@stylewhizme.com" class="inline-block bg-brand-cream text-brand-black px-10 py-5 rounded-full font-semibold text-xs uppercase tracking-[0.2em] hover:bg-brand-gold transition-colors duration-300 mb-16 shadow-xl">
+                Get in Touch
+            </a>
+
+            <p class="text-brand-muted text-[11px] uppercase tracking-[0.25em] font-medium">
+                © 2026 Stylewhizme. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== MOBILE MENU SCRIPT ===== -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const line1 = document.getElementById('line-1');
+        const line2 = document.getElementById('line-2');
+        const line3 = document.getElementById('line-3');
+        const navLinks = document.querySelectorAll('.mobile-nav-link');
+        let isOpen = false;
+
+        function toggleMenu() {
+            isOpen = !isOpen;
+            if (isOpen) {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                line1.classList.add('rotate-45', 'translate-y-2');
+                line2.classList.add('opacity-0');
+                line3.classList.add('-rotate-45', '-translate-y-2');
+                document.body.classList.add('overflow-hidden');
+            } else {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                line1.classList.remove('rotate-45', 'translate-y-2');
+                line2.classList.remove('opacity-0');
+                line3.classList.remove('-rotate-45', '-translate-y-2');
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        navLinks.forEach(link => link.addEventListener('click', toggleMenu));
+    </script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About – Stylewhizme | Luxury Styling & Image Curation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', 'serif'],
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                black: '#08080A',
+                card: '#111115',
+                cream: '#F4F0EA',
+                gold: '#D4AF37',
+                goldLight: '#F3E5AB',
+                muted: '#9A9A9E',
+                rose: '#B76E79',
+                teal: '#1A7A7A',
+                plum: '#5A2E4A',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-glow {
+            animation: glowPulse 4s ease-in-out infinite alternate;
+        }
+        @keyframes glowPulse {
+            0% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 20px 40px -12px rgba(212, 175, 55, 0.25);
+        }
+        .border-glow {
+            border-color: rgba(212, 175, 55, 0.3);
+            transition: border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+        .border-glow:hover {
+            border-color: #D4AF37;
+            box-shadow: 0 0 30px -8px rgba(212, 175, 55, 0.2);
+        }
+        .dropcap::first-letter {
+            font-size: 4.5rem;
+            float: left;
+            line-height: 0.8;
+            margin-right: 0.4rem;
+            background: linear-gradient(135deg, #F3E5AB, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 300;
+        }
+        .image-zoom {
+            transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), filter 0.6s ease;
+        }
+        .image-zoom:hover {
+            transform: scale(1.04);
+            filter: saturate(1.2) contrast(1.05);
+        }
+        .bg-mesh {
+            background-image: radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 70%, rgba(183, 110, 121, 0.06) 0%, transparent 50%);
+        }
+        .text-shadow-gold {
+            text-shadow: 0 0 40px rgba(212, 175, 55, 0.1);
+        }
+        .card-border-gradient {
+            border-image: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(183, 110, 121, 0.2)) 1;
+        }
+    </style>
+</head>
+<body class="bg-brand-black text-brand-cream font-sans antialiased selection:bg-brand-gold selection:text-black overflow-x-hidden bg-mesh">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-brand-black/80 border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-serif text-2xl tracking-[0.2em] text-brand-cream uppercase font-semibold group">
+                Stylewhizme<span class="text-brand-gold inline-block transition-transform duration-300 group-hover:scale-125 group-hover:rotate-3">.</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-10 text-xs tracking-[0.25em] uppercase font-medium text-brand-muted">
+                <a href="index.html" class="text-brand-gold border-b border-brand-gold/40 pb-0.5 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-gradient-to-r after:from-brand-gold after:to-brand-rose after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">Home</a>
+                <a href="philosophy.html" class="hover:text-brand-gold transition-colors duration-300 relative group">Philosophy <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-brand-gold transition-all group-hover:w-full"></span></a>
+                <a href="services.html" class="hover:text-brand-gold transition-colors duration-300 relative group">Services <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-brand-gold transition-all group-hover:w-full"></span></a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="Book.html" class="relative group overflow-hidden text-xs uppercase tracking-[0.2em] px-6 py-3 rounded-full text-brand-gold border border-brand-gold/40 inline-block transition-all duration-300 hover:text-black shadow-lg shadow-brand-gold/5 hover:shadow-brand-gold/20">
+                    <span class="absolute inset-0 bg-gradient-to-r from-brand-goldLight via-brand-gold to-brand-rose translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+                    <span class="relative z-10 font-medium">Book Consultation</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="md:hidden text-brand-cream focus:outline-none z-50 p-2">
+                <div class="w-6 h-5 flex flex-col justify-between">
+                    <span id="line-1" class="w-full h-0.5 bg-brand-cream transition-all duration-300 origin-left"></span>
+                    <span id="line-2" class="w-3/4 h-0.5 bg-brand-gold transition-all duration-300 self-end"></span>
+                    <span id="line-3" class="w-full h-0.5 bg-brand-cream transition-all duration-300 origin-left"></span>
+                </div>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="fixed inset-0 top-20 bg-brand-black/95 backdrop-blur-2xl transition-all duration-500 ease-in-out opacity-0 pointer-events-none flex flex-col justify-between p-8 border-t border-white/10 md:hidden h-[calc(100vh-5rem)]">
+            <div class="flex flex-col space-y-8 pt-6">
+                <a href="index.html" class="mobile-nav-link font-serif text-3xl text-brand-gold transition-colors hover:text-brand-rose">01. Home</a>
+                <a href="philosophy.html" class="mobile-nav-link font-serif text-3xl text-brand-cream hover:text-brand-gold transition-colors">02. Philosophy</a>
+                <a href="services.html" class="mobile-nav-link font-serif text-3xl text-brand-cream hover:text-brand-gold transition-colors">03. Services</a>
+            </div>
+            <div class="space-y-6 pt-8 border-t border-white/10">
+                <a href="Book.html" class="mobile-nav-link block text-center w-full bg-gradient-to-r from-brand-gold to-brand-rose text-black font-semibold uppercase tracking-[0.2em] text-xs py-4 rounded-full shadow-lg shadow-brand-gold/20 hover:shadow-brand-rose/30 transition-shadow">
+                    Book Consultation
+                </a>
+                <p class="text-center font-serif text-sm italic text-brand-muted">"Wear your confidence."</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== ABOUT HERO ===== -->
+    <section class="pt-40 pb-20 md:pt-48 md:pb-28 relative overflow-hidden bg-brand-black border-b border-white/5">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-gold/15 rounded-full blur-[140px] pointer-events-none animate-glow"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-brand-rose/10 rounded-full blur-[120px] pointer-events-none animate-glow" style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-teal/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Left: Text -->
+                <div class="animate-float">
+                    <span class="inline-block border border-brand-gold/30 bg-brand-gold/10 backdrop-blur-md px-4 py-1.5 rounded-full text-brand-goldLight uppercase text-[10px] md:text-xs tracking-[0.3em] mb-6 font-medium">
+                        About Stylewhizme
+                    </span>
+                    <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-light leading-[1.05] tracking-tight mb-6 text-shadow-gold">
+                        The art of <br /><span class="italic gold-gradient-text font-normal">personal style.</span>
+                    </h1>
+                    <p class="text-brand-muted text-base md:text-lg leading-relaxed font-light max-w-xl border-l-2 border-brand-gold/30 pl-6">
+                        Stylewhizme is a luxury styling atelier dedicated to refining personal image through the lens of high-art fashion, timeless elegance, and discreet, bespoke curation.
+                    </p>
+                </div>
+                <!-- Right: Image (vibrant, no B&W) -->
+                <div class="relative group">
+                    <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-brand-gold/10 image-zoom">
+                        <img src="https://i.pinimg.com/736x/c5/7d/d6/c57dd67fe2d92db50c30abe8277c089f.jpg" alt="Stylewhizme Founder" class="w-full h-[420px] md:h-[480px] object-cover object-center transition-all duration-700 group-hover:scale-105 group-hover:shadow-2xl" />
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 w-full h-full border border-brand-gold/20 rounded-2xl z-0 hidden sm:block group-hover:border-brand-gold/60 group-hover:shadow-2xl transition-all duration-500"></div>
+                    <div class="absolute top-4 right-4 bg-brand-black/60 backdrop-blur-sm px-4 py-2 rounded-full border border-brand-gold/30 text-xs text-brand-goldLight tracking-wider flex items-center gap-2">
+                        <span class="inline-block w-2 h-2 bg-brand-gold rounded-full animate-pulse"></span> Curated with passion
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOUNDER'S STORY ===== -->
+    <section class="py-20 md:py-28 border-t border-white/5 bg-brand-black relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-rose/5 via-transparent to-brand-teal/5 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-4 sticky top-28">
+                    <p class="text-xs uppercase tracking-[0.3em] text-brand-gold mb-3 font-semibold flex items-center gap-3">
+                        <span class="w-8 h-[2px] bg-brand-gold"></span> The Vision
+                    </p>
+                    <h2 class="font-serif text-3xl md:text-4xl text-brand-cream leading-tight font-light">
+                        Where confidence meets <span class="gold-gradient-text italic">craftsmanship.</span>
+                    </h2>
+                    <div class="mt-6 space-y-1 text-sm text-brand-muted font-light">
+                        <p>✦ Founded in 2016 · Global Clientele</p>
+                        <p>✦ Based in London · Paris · New York</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-8 space-y-6 text-base md:text-lg text-brand-muted font-light leading-relaxed">
+                    <p class="dropcap text-brand-cream">
+                        <span class="font-serif text-6xl float-left mr-4 leading-none text-brand-gold">S</span>tylewhizme was born from a simple yet profound belief: <span class="text-brand-cream font-normal">true style is not about the clothes you wear, but the presence you embody.</span> 
+                        Our founder, a former fashion editor and personal curator to international executives, saw a gap between the world of high-fashion editorial and the real, daily needs of individuals who wanted to look extraordinary without losing themselves in trends.
+                    </p>
+                    <p class="bg-brand-card/40 p-6 rounded-xl border-l-4 border-brand-rose backdrop-blur-sm">
+                        We exist to bridge that gap. Every consultation, every wardrobe edit, every red-carpet look is an exercise in <span class="text-brand-cream font-medium">authentic self-expression</span> – refined through the lens of classic tailoring, quiet luxury, and an unerring eye for detail.
+                    </p>
+                    <p>
+                        We don't just style; we <span class="text-brand-cream font-medium">curate identities</span>. From the boardroom to the gala, from a private dinner in Paris to a sun-drenched retreat in Mykonos, we ensure that you are always the most memorable version of yourself.
+                    </p>
+                    <div class="pt-8 border-t border-white/10 flex flex-wrap gap-8 justify-between">
+                        <div class="group hover:scale-105 transition-transform">
+                            <span class="block font-serif text-4xl gold-gradient-text italic">200+</span>
+                            <span class="text-xs uppercase tracking-[0.2em] text-brand-muted flex items-center gap-1"><span class="w-2 h-2 bg-brand-gold rounded-full"></span> Private Clients</span>
+                        </div>
+                        <div class="group hover:scale-105 transition-transform">
+                            <span class="block font-serif text-4xl gold-gradient-text italic">15+</span>
+                            <span class="text-xs uppercase tracking-[0.2em] text-brand-muted flex items-center gap-1"><span class="w-2 h-2 bg-brand-rose rounded-full"></span> Global Awards</span>
+                        </div>
+                        <div class="group hover:scale-105 transition-transform">
+                            <span class="block font-serif text-4xl gold-gradient-text italic">4.9★</span>
+                            <span class="text-xs uppercase tracking-[0.2em] text-brand-muted flex items-center gap-1"><span class="w-2 h-2 bg-brand-goldLight rounded-full"></span> Client Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TEAM / APPROACH ===== -->
+    <section class="py-20 md:py-28 border-t border-white/5 bg-brand-black relative">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brand-gold/30 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-xs uppercase tracking-[0.3em] text-brand-gold mb-3 font-semibold">The Approach</p>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-cream leading-tight font-light">
+                    Discreet, personal, <span class="gold-gradient-text italic">transformative.</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover-lift border-glow group relative overflow-hidden">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-gold/5 to-brand-rose/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-xl"></div>
+                    <span class="text-4xl font-serif text-brand-gold italic mb-4 block group-hover:scale-110 transition-transform">01</span>
+                    <h3 class="font-serif text-2xl text-brand-cream mb-3">Discovery</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">We begin with an in-depth consultation to understand your lifestyle, aspirations, and personal aesthetic philosophy.</p>
+                    <div class="mt-4 w-12 h-[2px] bg-gradient-to-r from-brand-gold to-brand-rose group-hover:w-20 transition-all"></div>
+                </div>
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover-lift border-glow group relative overflow-hidden">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-rose/5 to-brand-teal/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-xl"></div>
+                    <span class="text-4xl font-serif text-brand-gold italic mb-4 block group-hover:scale-110 transition-transform">02</span>
+                    <h3 class="font-serif text-2xl text-brand-cream mb-3">Curation</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">From high-fashion houses to emerging artisans, we source pieces that feel bespoke to you – no two edits are ever the same.</p>
+                    <div class="mt-4 w-12 h-[2px] bg-gradient-to-r from-brand-gold to-brand-teal group-hover:w-20 transition-all"></div>
+                </div>
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover-lift border-glow group relative overflow-hidden">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-teal/5 to-brand-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-xl"></div>
+                    <span class="text-4xl font-serif text-brand-gold italic mb-4 block group-hover:scale-110 transition-transform">03</span>
+                    <h3 class="font-serif text-2xl text-brand-cream mb-3">Presence</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">The final result is a wardrobe that doesn't just look exceptional – it feels like an extension of your identity. Effortless, elevated, unmistakable.</p>
+                    <div class="mt-4 w-12 h-[2px] bg-gradient-to-r from-brand-gold to-brand-rose group-hover:w-20 transition-all"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIAL ===== -->
+    <section class="py-20 border-t border-white/5 bg-brand-black relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-rose/5 via-transparent to-brand-teal/5 pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative">
+            <div class="absolute left-1/2 -translate-x-1/2 -top-8 text-7xl text-brand-gold/20 font-serif italic">"</div>
+            <p class="text-xs uppercase tracking-[0.3em] text-brand-gold mb-4 font-semibold">What clients say</p>
+            <blockquote class="font-serif text-2xl md:text-4xl text-brand-cream font-light leading-[1.3] italic relative">
+                “Stylewhizme didn't just change my wardrobe – they changed how I show up in the world. Every piece feels like it was made for me, because it was.”
+            </blockquote>
+            <p class="mt-6 text-brand-muted text-sm tracking-widest uppercase flex items-center justify-center gap-3">
+                <span class="w-8 h-px bg-brand-gold"></span> – A. Deveraux, Global Executive <span class="w-8 h-px bg-brand-gold"></span>
+            </p>
+            <div class="mt-8 flex justify-center gap-1">
+                <span class="w-2 h-2 bg-brand-gold rounded-full animate-pulse"></span>
+                <span class="w-2 h-2 bg-brand-gold rounded-full animate-pulse" style="animation-delay: 0.2s;"></span>
+                <span class="w-2 h-2 bg-brand-gold rounded-full animate-pulse" style="animation-delay: 0.4s;"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="py-20 border-t border-white/5 text-center relative overflow-hidden bg-brand-black">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-gold/5 to-brand-rose/5 pointer-events-none"></div>
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brand-gold/40 to-transparent"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="font-serif text-5xl md:text-7xl mb-4 tracking-wider hover:scale-105 transition-transform duration-500">Stylewhizme<span class="text-brand-gold inline-block animate-pulse">.</span></h2>
+            <p class="font-serif text-2xl md:text-3xl italic gold-gradient-text mb-12 animate-float">"Wear your confidence."</p>
+            
+            <a href="mailto:contact@stylewhizme.com" class="inline-block bg-gradient-to-r from-brand-cream to-brand-goldLight text-brand-black px-10 py-5 rounded-full font-semibold text-xs uppercase tracking-[0.2em] hover:from-brand-gold hover:to-brand-rose transition-all duration-300 mb-16 shadow-xl shadow-brand-gold/20 hover:shadow-brand-rose/30 transform hover:scale-105">
+                Get in Touch
+            </a>
+
+            <div class="flex justify-center gap-6 mb-8">
+                <span class="w-10 h-10 rounded-full border border-brand-gold/20 flex items-center justify-center text-brand-muted hover:border-brand-gold hover:text-brand-gold transition-all cursor-pointer">in</span>
+                <span class="w-10 h-10 rounded-full border border-brand-gold/20 flex items-center justify-center text-brand-muted hover:border-brand-gold hover:text-brand-gold transition-all cursor-pointer">ig</span>
+                <span class="w-10 h-10 rounded-full border border-brand-gold/20 flex items-center justify-center text-brand-muted hover:border-brand-gold hover:text-brand-gold transition-all cursor-pointer">yt</span>
+            </div>
+
+            <p class="text-brand-muted text-[11px] uppercase tracking-[0.25em] font-medium">
+                © 2026 Stylewhizme. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== MOBILE MENU SCRIPT ===== -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const line1 = document.getElementById('line-1');
+        const line2 = document.getElementById('line-2');
+        const line3 = document.getElementById('line-3');
+        const navLinks = document.querySelectorAll('.mobile-nav-link');
+        let isOpen = false;
+
+        function toggleMenu() {
+            isOpen = !isOpen;
+            if (isOpen) {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                line1.classList.add('rotate-45', 'translate-y-2');
+                line2.classList.add('opacity-0');
+                line3.classList.add('-rotate-45', '-translate-y-2');
+                document.body.classList.add('overflow-hidden');
+            } else {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                line1.classList.remove('rotate-45', 'translate-y-2');
+                line2.classList.remove('opacity-0');
+                line3.classList.remove('-rotate-45', '-translate-y-2');
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        navLinks.forEach(link => link.addEventListener('click', toggleMenu));
+    </script>
+</body>
+</html>
