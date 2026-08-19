@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylewhizme | Luxury Styling & Image Curation</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About – Stylewhizme | Luxury Styling & Image Curation</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <script>
       tailwind.config = {
         theme: {
@@ -27,9 +27,15 @@
                 goldLight: '#F5E6B3',
                 goldDark: '#997B1A',
                 muted: '#9E9EA5',
-                rose: '#C57B88',
                 border: 'rgba(212, 175, 55, 0.15)',
+                rose: '#C57B88',
+                teal: '#1A7A7A',
               }
+            },
+            backgroundImage: {
+              'gold-gradient': 'linear-gradient(135deg, #F5E6B3 0%, #D4AF37 50%, #997B1A 100%)',
+              'rose-gradient': 'linear-gradient(135deg, #F5E6B3 0%, #C57B88 100%)',
+              'glass-gradient': 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%)',
             }
           }
         }
@@ -37,7 +43,7 @@
     </script>
     <style>
         .gold-gradient-text {
-            background: linear-gradient(135deg, #F5E6B3 0%, #D4AF37 50%, #997B1A 100%);
+            background: linear-gradient(135deg, #F5E6B3 0%, #D4AF37 50%, #B88E28 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -50,7 +56,7 @@
             background: rgba(20, 20, 26, 0.65);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.12);
         }
         .glass-card-hover {
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -60,6 +66,18 @@
             background: rgba(26, 26, 34, 0.85);
             border-color: rgba(212, 175, 55, 0.35);
             box-shadow: 0 20px 40px -15px rgba(212, 175, 55, 0.15);
+        }
+        .dropcap::first-letter {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.8rem;
+            float: left;
+            line-height: 0.75;
+            margin-right: 0.75rem;
+            margin-top: 0.2rem;
+            background: linear-gradient(135deg, #F5E6B3, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 400;
         }
         .ambient-glow-1 {
             background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 70%);
@@ -77,8 +95,8 @@
 
     <!-- ===== NAVIGATION ===== -->
     <header class="fixed top-0 w-full z-50 backdrop-blur-2xl bg-brand-black/75 border-b border-white/5 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-22 flex items-center justify-between py-4">
-            <a href="index.html" class="group flex items-center gap-2">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-22 flex items-center justify-between">
+            <a href="index.html" class="group flex items-center gap-2 py-4">
                 <span class="font-serif text-2xl md:text-3xl tracking-[0.18em] text-brand-cream uppercase font-semibold">
                     Stylewhizme<span class="text-brand-gold inline-block transition-transform duration-300 group-hover:scale-125">.</span>
                 </span>
@@ -87,13 +105,13 @@
             
             <!-- Desktop Menu -->
             <nav class="hidden md:flex items-center space-x-10 text-[11px] tracking-[0.25em] uppercase font-medium text-brand-muted">
-                <a href="index.html" class="text-brand-gold font-semibold py-1 relative">
+                <a href="index.html" class="hover:text-brand-gold transition-colors duration-300 py-1 relative group">
                     Home
-                    <span class="absolute bottom-0 left-0 w-full h-[1.5px] bg-gradient-to-r from-brand-gold to-brand-rose"></span>
-                </a>
-                <a href="about.html" class="hover:text-brand-gold transition-colors duration-300 py-1 relative group">
-                    About
                     <span class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="about.html" class="text-brand-gold font-semibold py-1 relative">
+                    About
+                    <span class="absolute bottom-0 left-0 w-full h-[1.5px] bg-gradient-to-r from-brand-gold to-brand-rose"></span>
                 </a>
                 <a href="philosophy.html" class="hover:text-brand-gold transition-colors duration-300 py-1 relative group">
                     Philosophy
@@ -125,8 +143,8 @@
         <!-- Mobile Drawer -->
         <div id="mobile-menu" class="fixed inset-0 top-20 bg-brand-black/95 backdrop-blur-3xl transition-all duration-500 ease-in-out opacity-0 pointer-events-none flex flex-col justify-between p-8 border-t border-white/10 md:hidden">
             <div class="flex flex-col space-y-6 pt-6">
-                <a href="index.html" class="mobile-nav-link font-serif text-3xl text-brand-gold">01. Home</a>
-                <a href="about.html" class="mobile-nav-link font-serif text-3xl text-brand-cream hover:text-brand-gold transition-colors">02. About</a>
+                <a href="index.html" class="mobile-nav-link font-serif text-3xl text-brand-cream hover:text-brand-gold transition-colors">01. Home</a>
+                <a href="about.html" class="mobile-nav-link font-serif text-3xl text-brand-gold">02. About</a>
                 <a href="philosophy.html" class="mobile-nav-link font-serif text-3xl text-brand-cream hover:text-brand-gold transition-colors">03. Philosophy</a>
                 <a href="services.html" class="mobile-nav-link font-serif text-3xl text-brand-cream hover:text-brand-gold transition-colors">04. Services</a>
             </div>
@@ -140,216 +158,222 @@
     </header>
 
     <!-- ===== HERO SECTION ===== -->
-    <section class="min-h-screen flex items-center justify-center relative pt-24 overflow-hidden">
-        <!-- Ambient Background Image Frame -->
-        <div class="absolute inset-0 z-0">
-            <img src="https://i.pinimg.com/736x/81/32/40/81324092579e3673f1c93b5955bd072e.jpg" alt="Luxury Background" class="w-full h-full object-cover object-center opacity-30 scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-b from-brand-black/90 via-brand-black/75 to-brand-black"></div>
-        </div>
+    <section class="pt-36 pb-20 md:pt-48 md:pb-32 relative overflow-hidden">
+        <div class="absolute top-20 left-10 w-96 h-96 ambient-glow-1 pointer-events-none rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 ambient-glow-2 pointer-events-none rounded-full blur-[140px]"></div>
 
-        <!-- Floating Glow Effects -->
-        <div class="absolute top-1/4 left-10 w-96 h-96 ambient-glow-1 pointer-events-none rounded-full blur-[120px]"></div>
-        <div class="absolute bottom-20 right-10 w-96 h-96 ambient-glow-2 pointer-events-none rounded-full blur-[140px]"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full glass-card border border-brand-gold/30">
+                       
+                    </div>
 
-    
+                    <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light leading-[1.02] tracking-tight">
+                        Crafting presence <br />
+                        through <span class="italic gold-gradient-text font-normal">bespoke style.</span>
+                    </h1>
 
-            <h1 class="font-serif text-5xl sm:text-7xl lg:text-9xl font-light leading-[1.02] tracking-tight mb-8">
-                Timeless aura meets <br />
-                <span class="italic font-normal gold-gradient-text">bespoke luxury.</span>
-            </h1>
+                    <p class="text-brand-muted text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-2xl border-l border-brand-gold/40 pl-6">
+                        Stylewhizme is a private image curation atelier. We define personal style not by seasonal trends, but through precision tailoring, artistic proportion, and authentic aura.
+                    </p>
 
-            <p class="text-brand-muted max-w-2xl mx-auto text-base md:text-lg font-light leading-relaxed mb-12">
-                A private image curation atelier dedicated to refining personal style through high-art tailoring, deliberate silhouettes, and quiet elegance.
-            </p>
+                    <div class="flex flex-wrap items-center gap-6 pt-4">
+                        <a href="#story" class="px-8 py-4 rounded-full bg-brand-cream text-brand-black text-xs uppercase tracking-[0.2em] font-semibold hover:bg-brand-gold transition-colors duration-300">
+                            Explore Narrative
+                        </a>
+                        <a href="services.html" class="text-xs uppercase tracking-[0.2em] text-brand-goldLight flex items-center gap-2 group hover:text-brand-cream transition-colors">
+                            View Collections <span class="transition-transform group-hover:translate-x-1">→</span>
+                        </a>
+                    </div>
+                </div>
 
-            <div class="flex flex-col sm:flex-row gap-5 justify-center items-center max-w-md mx-auto">
-                <a href="services.html" class="w-full sm:w-auto px-9 py-4 rounded-full bg-brand-cream text-brand-black font-semibold text-xs uppercase tracking-[0.2em] hover:bg-brand-gold transition-colors duration-300 shadow-xl shadow-brand-gold/10">
-                    Explore Services
-                </a>
-                <a href="about.html" class="w-full sm:w-auto px-9 py-4 rounded-full border border-brand-gold/30 glass-card font-medium text-xs uppercase tracking-[0.2em] text-brand-cream hover:border-brand-gold hover:text-brand-gold transition-all duration-300">
-                    The Narrative
-                </a>
+                <!-- Right Visual Frame -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative z-10 rounded-3xl overflow-hidden glass-card p-3 border border-brand-gold/20 shadow-2xl">
+                        <div class="overflow-hidden rounded-2xl relative group">
+                            <img src="https://i.pinimg.com/736x/c5/7d/d6/c57dd67fe2d92db50c30abe8277c089f.jpg" alt="Stylewhizme Founder & Creative Director" class="w-full h-[480px] md:h-[560px] object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent opacity-80"></div>
+                            
+                            <div class="absolute bottom-6 left-6 right-6 p-5 glass-card rounded-xl border border-white/10">
+                                <p class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Curated Couture</p>
+                                <p class="font-serif text-lg text-brand-cream italic">"True style demands quiet confidence."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ambient Floating Frame Accent -->
+                    <div class="absolute -bottom-6 -right-6 w-full h-full rounded-3xl border border-brand-gold/20 -z-10 hidden sm:block"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== BENTO PHILOSOPHY GRID ===== -->
-    <section id="philosophy" class="py-28 border-t border-white/5 relative">
+    <!-- ===== BENTO NARRATIVE GRID ===== -->
+    <section id="story" class="py-24 border-t border-white/5 relative">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="mb-16 max-w-2xl">
-                <p class="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">Core Pillars</p>
+                <p class="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">Atelier Overview</p>
                 <h2 class="font-serif text-4xl sm:text-5xl text-brand-cream leading-tight font-light">
-                    Effortless presence, <span class="italic gold-gradient-text">curated with intention.</span>
+                    The intersection of <span class="italic gold-gradient-text">artistry & image.</span>
                 </h2>
             </div>
 
             <!-- Bento Container -->
             <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                <!-- Large Card (8 Cols) -->
+                <!-- Main Founder Story (8 cols) -->
                 <div class="md:col-span-8 glass-card glass-card-hover p-8 md:p-12 rounded-3xl relative overflow-hidden flex flex-col justify-between">
-                    <div class="absolute -right-10 -top-10 w-48 h-48 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none"></div>
                     <div>
-                        <span class="text-brand-gold font-serif text-3xl italic block mb-6">01 / Beyond Trends</span>
-                        <h3 class="font-serif text-3xl md:text-4xl text-brand-cream mb-4 font-normal">Authentic Expression Over Fast Cycles</h3>
-                        <p class="text-brand-muted text-base leading-relaxed font-light">
-                            True luxury does not react to viral internet cycles—it commands room presence through precision cuts, elevated fabric textures, and timeless proportion tailored exclusively to your personal energy.
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="w-8 h-px bg-brand-gold"></span>
+                            <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-medium">Founder's Philosophy</span>
+                        </div>
+                        <p class="dropcap text-brand-muted text-base md:text-lg leading-relaxed font-light">
+                            Stylewhizme was established to refine how global leaders, creative pioneers, and discerning tastemakers present themselves to the world. We view fashion as a living sculpture. Every fabric choice, cut, and color tone is selected to echo your unique personal narrative.
+                        </p>
+                        <p class="mt-6 text-brand-muted text-base md:text-lg leading-relaxed font-light">
+                            Moving beyond fleeting viral trends, our methodology fuses classic tailoring, subtle luxury, and high-editorial precision to curate timeless wardrobes that command attention effortlessly.
                         </p>
                     </div>
-                    <div class="pt-8 mt-6 border-t border-white/10 flex items-center justify-between text-xs uppercase tracking-[0.2em] text-brand-goldLight">
-                        <span>Aesthetic Mastery</span>
-                        <span>Tailored Tailoring</span>
+
+                    <div class="pt-10 mt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-6">
+                        <div>
+                            <p class="font-serif text-xl text-brand-cream font-medium">Kelechi N. & Creative Guild</p>
+                            <p class="text-xs uppercase tracking-[0.2em] text-brand-muted">Image Direction & Styling</p>
+                        </div>
+                        <div class="flex items-center gap-2 text-brand-gold text-xs uppercase tracking-[0.2em]">
+                            <span>London</span> • <span>Paris</span> • <span>Abuja</span> • <span>NYC</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Small Card (4 Cols) -->
-                <div class="md:col-span-4 glass-card glass-card-hover p-8 md:p-10 rounded-3xl flex flex-col justify-between">
-                    <div>
-                        <span class="text-brand-rose font-serif text-3xl italic block mb-6">02 / Quiet Confidence</span>
-                        <h3 class="font-serif text-2xl md:text-3xl text-brand-cream mb-4 font-normal">Subtle Luxury</h3>
-                        <p class="text-brand-muted text-sm leading-relaxed font-light">
-                            Blending high-art editorial silhouettes with the quiet power of old-world tailoring to ensure you stand out without shouting.
-                        </p>
+                <!-- Stats Bento (4 cols) -->
+                <div class="md:col-span-4 flex flex-col gap-6">
+                    <!-- Stat Card 1 -->
+                    <div class="glass-card glass-card-hover p-8 rounded-3xl flex-1 flex flex-col justify-center">
+                        <span class="font-serif text-5xl md:text-6xl gold-gradient-text italic font-normal">200+</span>
+                        <p class="text-xs uppercase tracking-[0.25em] text-brand-muted mt-2">Private Wardrobes Curated</p>
+                    </div>
+
+                    <!-- Stat Card 2 -->
+                    <div class="glass-card glass-card-hover p-8 rounded-3xl flex-1 flex flex-col justify-center">
+                        <span class="font-serif text-5xl md:text-6xl rose-gradient-text italic font-normal">100%</span>
+                        <p class="text-xs uppercase tracking-[0.25em] text-brand-muted mt-2">Bespoke Confidentiality</p>
+                    </div>
+
+                    <!-- Stat Card 3 -->
+                    <div class="glass-card glass-card-hover p-8 rounded-3xl flex-1 flex flex-col justify-center">
+                        <span class="font-serif text-5xl md:text-6xl gold-gradient-text italic font-normal">15+</span>
+                        <p class="text-xs uppercase tracking-[0.25em] text-brand-muted mt-2">Editorial Partnerships</p>
                     </div>
                 </div>
 
-                <!-- Small Card (4 Cols) -->
-                <div class="md:col-span-4 glass-card glass-card-hover p-8 md:p-10 rounded-3xl flex flex-col justify-between">
-                    <div>
-                        <span class="text-brand-gold font-serif text-3xl italic block mb-6">03 / Precision Detail</span>
-                        <h3 class="font-serif text-2xl md:text-3xl text-brand-cream mb-4 font-normal">Micro Sourcing</h3>
-                        <p class="text-brand-muted text-sm leading-relaxed font-light">
-                            Every garment choice, color tone, and piece of hardware is hand-picked to align with your lifestyle calendar and public obligations.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Medium Card (8 Cols) -->
-                <div class="md:col-span-8 glass-card glass-card-hover p-8 md:p-12 rounded-3xl relative overflow-hidden flex flex-col justify-between bg-gradient-to-r from-brand-card via-brand-surface to-brand-card">
-                    <div>
-                        <span class="text-brand-goldLight font-serif text-3xl italic block mb-6">04 / Unforgettable Aura</span>
-                        <h3 class="font-serif text-3xl md:text-4xl text-brand-cream mb-4 font-normal">Redefining Personal Identity</h3>
-                        <p class="text-brand-muted text-base leading-relaxed font-light">
-                            Our vision is to elevate personal image into a strategic asset—making elegance feel deeply personal, effortlessly attainable, and enduringly memorable across international capitals.
-                        </p>
+                <!-- Quote Banner Bento (12 cols) -->
+                <div class="md:col-span-12 glass-card glass-card-hover p-8 md:p-10 rounded-3xl relative overflow-hidden bg-gradient-to-r from-brand-card via-brand-surface to-brand-card">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                        <div class="space-y-2">
+                            <p class="text-xs uppercase tracking-[0.3em] text-brand-rose font-semibold">The Core Rule</p>
+                            <h3 class="font-serif text-2xl md:text-3xl text-brand-cream italic font-light">
+                                "Clothes do not create presence; they amplify what is already within."
+                            </h3>
+                        </div>
+                        <a href="Book.html" class="shrink-0 px-8 py-4 rounded-full border border-brand-gold/40 text-brand-goldLight text-xs uppercase tracking-[0.2em] hover:bg-brand-gold hover:text-black transition-all">
+                            Book Private Session
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== ABOUT SHOWCASE SECTION ===== -->
-    <section id="about" class="py-28 border-t border-white/5 relative bg-brand-surface/40">
+    <!-- ===== THE THREE-STEP METHOD ===== -->
+    <section class="py-24 border-t border-white/5 relative bg-brand-surface/50">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-                <!-- Image Accent Frame -->
-                <div class="lg:col-span-5 relative group">
-                    <div class="relative z-10 rounded-3xl overflow-hidden glass-card p-3 border border-brand-gold/20 shadow-2xl">
-                        <div class="overflow-hidden rounded-2xl relative">
-                            <img src="https://i.pinimg.com/1200x/2f/ee/ee/2feeeea27abdbfa1a4cfeada6905ca7c.jpg" alt="Luxury Fashion Portrait" class="w-full h-[520px] md:h-[600px] object-cover object-center transition-transform duration-700 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent opacity-60"></div>
-                        </div>
-                    </div>
-                    <!-- Decorative Gold Accent Frame -->
-                    <div class="absolute -bottom-6 -right-6 w-full h-full border border-brand-gold/20 rounded-3xl -z-10 hidden sm:block"></div>
-                </div>
-
-                <!-- Narrative Content -->
-                <div class="lg:col-span-7">
-                    <p class="text-xs uppercase tracking-[0.3em] text-brand-gold mb-3 font-semibold">The Atelier Story</p>
-                    <h2 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-cream font-light mb-8 leading-[1.08]">
-                        Crafting personal narratives through <span class="italic gold-gradient-text font-normal">high-art fashion.</span>
-                    </h2>
-                    <p class="text-brand-muted text-base md:text-lg leading-relaxed mb-6 font-light">
-                        Founded on the conviction that personal style is an authentic expression of internal confidence, Stylewhizme bridges the gap between haute couture editorial design and pragmatic wardrobe curation.
-                    </p>
-                    <p class="text-brand-muted text-base md:text-lg leading-relaxed mb-10 font-light">
-                        Whether engineering high-profile red-carpet ensembles, building modular capsule wardrobes for global executives, or redefining an aesthetic identity, we offer discreet, world-class styling bespoke to your lifestyle.
-                    </p>
-
-                    <div class="grid grid-cols-2 gap-8 pt-8 border-t border-white/10">
-                        <div>
-                            <span class="font-serif text-4xl md:text-5xl gold-gradient-text italic block font-normal">10+</span>
-                            <span class="text-xs uppercase tracking-[0.2em] text-brand-muted font-medium">Years of Curation</span>
-                        </div>
-                        <div>
-                            <span class="font-serif text-4xl md:text-5xl rose-gradient-text italic block font-normal">Bespoke</span>
-                            <span class="text-xs uppercase tracking-[0.2em] text-brand-muted font-medium">Private Atelier</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== TAILORED SERVICES ===== -->
-    <section id="services" class="py-28 border-t border-white/5 relative">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="mb-20 max-w-2xl">
-                <p class="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">Tailored Offerings</p>
-                <h2 class="font-serif text-4xl md:text-5xl text-brand-cream leading-tight font-light">
-                    Exclusive Image <span class="italic gold-gradient-text">Curations</span>
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <p class="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">Our Process</p>
+                <h2 class="font-serif text-4xl sm:text-5xl text-brand-cream leading-tight font-light">
+                    The Curation <span class="italic gold-gradient-text">Methodology</span>
                 </h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="glass-card glass-card-hover p-8 md:p-10 rounded-3xl flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold">01 / Gala & Event</span>
-                        <h3 class="font-serif text-2xl md:text-3xl text-brand-cream mt-4 mb-3">Red Carpet & Appearance</h3>
-                        <p class="text-brand-muted text-sm leading-relaxed font-light mb-8">
-                            High-octane styling for galas, award shows, and high-profile public appearances engineered to command the room with elegance.
-                        </p>
-                    </div>
-                    <a href="Book.html" class="text-xs uppercase tracking-widest text-brand-cream hover:text-brand-gold transition-colors inline-flex items-center gap-2 font-medium">
-                        Reserve Inquiries <span>→</span>
-                    </a>
+                <!-- Step 1 -->
+                <div class="glass-card glass-card-hover p-8 rounded-3xl relative group">
+                    <span class="font-serif text-6xl italic text-brand-gold/20 group-hover:text-brand-gold/40 transition-colors">01</span>
+                    <h3 class="font-serif text-2xl text-brand-cream mt-4 mb-3">Aura & Life Audit</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">
+                        We analyze your daily routine, public engagements, aesthetic leanings, and body architecture to build your custom style blueprint.
+                    </p>
+                    <div class="mt-8 h-0.5 w-12 bg-gradient-to-r from-brand-gold to-transparent group-hover:w-full transition-all duration-500"></div>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="glass-card glass-card-hover p-8 md:p-10 rounded-3xl flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-rose">02 / Executive</span>
-                        <h3 class="font-serif text-2xl md:text-3xl text-brand-cream mt-4 mb-3">Capsule Wardrobe Index</h3>
-                        <p class="text-brand-muted text-sm leading-relaxed font-light mb-8">
-                            Seamless, high-end capsule wardrobe curation designed for high-net-worth professionals, executives, and international travelers.
-                        </p>
-                    </div>
-                    <a href="Book.html" class="text-xs uppercase tracking-widest text-brand-cream hover:text-brand-gold transition-colors inline-flex items-center gap-2 font-medium">
-                        Reserve Inquiries <span>→</span>
-                    </a>
+                <!-- Step 2 -->
+                <div class="glass-card glass-card-hover p-8 rounded-3xl relative group">
+                    <span class="font-serif text-6xl italic text-brand-rose/20 group-hover:text-brand-rose/40 transition-colors">02</span>
+                    <h3 class="font-serif text-2xl text-brand-cream mt-4 mb-3">Atelier Sourcing</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">
+                        Accessing heritage luxury houses, niche artisans, and custom tailors across Europe and Africa to procure bespoke garments.
+                    </p>
+                    <div class="mt-8 h-0.5 w-12 bg-gradient-to-r from-brand-rose to-transparent group-hover:w-full transition-all duration-500"></div>
                 </div>
 
-                <!-- Service 3 -->
-                <div class="glass-card glass-card-hover p-8 md:p-10 rounded-3xl flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-goldLight">03 / Complete</span>
-                        <h3 class="font-serif text-2xl md:text-3xl text-brand-cream mt-4 mb-3">Aesthetic Identity Transformation</h3>
-                        <p class="text-brand-muted text-sm leading-relaxed font-light mb-8">
-                            Full personal image overhauls matching color theory, proportion analysis, brand positioning, and daily lifestyle requirements.
-                        </p>
-                    </div>
-                    <a href="Book.html" class="text-xs uppercase tracking-widest text-brand-cream hover:text-brand-gold transition-colors inline-flex items-center gap-2 font-medium">
-                        Reserve Inquiries <span>→</span>
-                    </a>
+                <!-- Step 3 -->
+                <div class="glass-card glass-card-hover p-8 rounded-3xl relative group">
+                    <span class="font-serif text-6xl italic text-brand-goldLight/20 group-hover:text-brand-goldLight/40 transition-colors">03</span>
+                    <h3 class="font-serif text-2xl text-brand-cream mt-4 mb-3">Architectural Lookbook</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">
+                        Receive a digitized, high-resolution style catalog paired with personalized fitting sessions and seasonal wardrobe indexing.
+                    </p>
+                    <div class="mt-8 h-0.5 w-12 bg-gradient-to-r from-brand-goldLight to-transparent group-hover:w-full transition-all duration-500"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== FOOTER CTA ===== -->
-    <footer id="contact" class="py-24 border-t border-white/10 text-center relative overflow-hidden bg-brand-black">
-        <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <h2 class="font-serif text-5xl md:text-7xl mb-4 tracking-wider text-brand-cream">Stylewhizme<span class="text-brand-gold">.</span></h2>
-            <p class="font-serif text-2xl md:text-3xl italic gold-gradient-text mb-12">"Wear your confidence."</p>
-            
-            <a href="mailto:contact@stylewhizme.com" class="inline-block bg-gradient-to-r from-brand-gold to-brand-rose text-black px-10 py-5 rounded-full font-semibold text-xs uppercase tracking-[0.2em] shadow-xl hover:opacity-95 transition-opacity mb-16">
-                Initiate Private Contact
-            </a>
+    <!-- ===== CLIENT TESTIMONIAL ===== -->
+    <section class="py-24 border-t border-white/5 relative">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <span class="text-6xl font-serif gold-gradient-text block mb-4">“</span>
+            <blockquote class="font-serif text-2xl md:text-4xl text-brand-cream font-light leading-snug italic">
+                Stylewhizme did not merely refine my wardrobe; they restructured my presence. Every garment engineered for my calendar feels effortless, deliberate, and undeniably powerful.
+            </blockquote>
+            <div class="mt-8 inline-flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full border border-brand-gold/40 bg-brand-card flex items-center justify-center font-serif text-brand-gold font-bold">AD</div>
+                <div class="text-left">
+                    <p class="text-xs uppercase tracking-[0.2em] text-brand-cream font-semibold">A. Deveraux</p>
+                    <p class="text-[10px] uppercase tracking-[0.18em] text-brand-muted">Managing Director, Global Ventures</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <p class="text-brand-muted text-[11px] uppercase tracking-[0.25em] font-medium">
-                © 2026 Stylewhizme. All Rights Reserved.
-            </p>
+    <!-- ===== FOOTER ===== -->
+    <footer class="py-20 border-t border-white/10 bg-brand-black relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-10 pb-16 border-b border-white/5">
+                <div>
+                    <h2 class="font-serif text-4xl md:text-6xl text-brand-cream">
+                        Stylewhizme<span class="text-brand-gold">.</span>
+                    </h2>
+                    <p class="font-serif text-xl italic gold-gradient-text mt-2">Bespoke Styling & Private Image Curation</p>
+                </div>
+                <div>
+                    <a href="mailto:contact@stylewhizme.com" class="px-8 py-4 rounded-full bg-gradient-to-r from-brand-gold to-brand-rose text-black font-semibold text-xs uppercase tracking-[0.2em] shadow-lg hover:opacity-95 transition-opacity">
+                        Initiate Consultation
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-10 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-brand-muted uppercase tracking-[0.2em]">
+                <p>© 2026 Stylewhizme. All Rights Reserved.</p>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="hover:text-brand-gold transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-brand-gold transition-colors">LinkedIn</a>
+                    <a href="#" class="hover:text-brand-gold transition-colors">Editorial</a>
+                </div>
+            </div>
         </div>
     </footer>
 
